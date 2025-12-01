@@ -130,7 +130,7 @@ function CardForm({
   }
 
   function handleFileUpload(file) {
-    const types = ["jpeg", "png", "gif"];
+    const types = ["jpeg", "png", "gif", "webp"];
     // const file = event.target.files[0];
     const maxAllowedSize = 5 * 1024 * 1024; //5MB;
     if (file.size > maxAllowedSize) {
@@ -150,7 +150,7 @@ function CardForm({
 
           if (!isImage) {
             alert(
-              "Solo estan soportados los formatos .jpeg, .png y .gif. Intentelo de nuevo."
+              "Solo estan soportados los formatos .jpeg, .png, .jpg, .webp y .gif. Intentelo de nuevo."
             );
             return;
           }
@@ -177,7 +177,7 @@ function CardForm({
             name="image"
             title="Subir un archivo"
             id="image"
-            accept=".gif,.jpeg,.png"
+            accept=".gif,.jpeg,.png,.jpg,.webp"
             onChange={(e) => handleFileUpload(e.target.files[0])}
           />
         </div>

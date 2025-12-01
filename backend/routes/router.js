@@ -3,7 +3,7 @@ const router = express.Router();
 const schemas = require("../models/schemas");
 const axios = require("axios");
 const fs = require("fs");
-const Img = require("base64-img");
+const base64Img = require("base64-img");
 
 router.post("/cards", async (req, res) => {
   // console.log(req.body);
@@ -88,7 +88,7 @@ router.post("/cards", async (req, res) => {
           })
           .catch((errUpdate) => console.err(errUpdate));
       } else {
-        res.status(500).send("ERROR").end();
+        //res.status(500).send("ERROR").end();
         console.error("An error occurred:", err);
         console.log("DATA NOT INSERTED!");
       }

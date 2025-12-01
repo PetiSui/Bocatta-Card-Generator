@@ -149,7 +149,7 @@ h2{
 .tarjeta {
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
-  grid-template-columns: .4fr .8fr;
+  grid-template-columns: .5fr .9fr;
   place-items: center;
   gap: 3rem;
 }
